@@ -12,10 +12,10 @@ namespace mhope.Math
 	public class Fibonacci
 	{
 		/// <summary>
-		/// Creates a fibonacci sequence up to and including the specified index
+		/// Creates a Fibonacci sequence up to and including the specified index
 		/// </summary>
-		/// <param name="index">index of the final value in the fibonacci sequence</param>
-		/// <returns>a fibonacci sequence</returns>
+		/// <param name="index">index of the final value in the Fibonacci sequence</param>
+		/// <returns>a Fibonacci sequence</returns>
 		public IEnumerable<long> GetFibonacciSequence(int index) 
 		{
 			for (int i = 0; i <= index; i++)

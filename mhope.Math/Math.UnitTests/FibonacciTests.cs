@@ -17,22 +17,14 @@ namespace Math.UnitTests
 			Assert.IsTrue(number == expectedValue);
 		}
 
-		[Test]
-		public void Test_Fibonacci_At_Index_One()
-		{
-			const long expectedValue = 1;
-			var fib = new Fibonacci();
-			long number = fib.GetFibonacciNumberAtIndex(1);
-			Assert.IsTrue(number == expectedValue);
-		}
-
-		[Test]
-		[ExpectedException(typeof(ArgumentOutOfRangeException))]
-		public void Test_Fibonacci_At_Invalid_Index()
-		{
-			var fib = new Fibonacci();
-			fib.GetFibonacciNumberAtIndex(-1);
-		}
+        [Test]
+        public void Test_Fibonacci_At_Index_One()
+        {
+            const long expectedValue = 1;
+            var fib = new Fibonacci();
+            long number = fib.GetFibonacciNumberAtIndex(1);
+            Assert.IsTrue(number == expectedValue);
+        }
 
 		[Test]
 		public void Test_Fibonacci_At_Index_Five()

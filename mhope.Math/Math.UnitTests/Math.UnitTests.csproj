@@ -78,6 +78,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Math.FSharp\Math.FSharp.fsproj">
+      <Project>{9dbc8a00-0033-4f5c-bce2-e226258db482}</Project>
+      <Name>Math.FSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Math\Math.csproj">
       <Project>{6259a694-b798-4cbd-a72c-8d5ce054e616}</Project>
       <Name>Math</Name>

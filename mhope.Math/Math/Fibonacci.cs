@@ -9,14 +9,14 @@ namespace mhope.Math
 	 * where n > 1
 	 * f[0] = 0; f[1] = 1
 	 */
-	public class Fibonacci
+	public static class Fibonacci
 	{
 		/// <summary>
 		/// Creates a Fibonacci sequence up to and including the specified index
 		/// </summary>
 		/// <param name="index">index of the final value in the Fibonacci sequence</param>
 		/// <returns>a Fibonacci sequence</returns>
-		public IEnumerable<long> GetFibonacciSequence(int index) 
+		public static IEnumerable<long> GetFibonacciSequence(int index) 
 		{
 			for (int i = 0; i <= index; i++)
 			{
@@ -26,7 +26,7 @@ namespace mhope.Math
 		}
 
 		//
-		public long GetFibonacciNumberAtIndex(int index)
+		public static long GetFibonacciNumberAtIndex(int index)
 		{
 			if(index < 0)
 			{

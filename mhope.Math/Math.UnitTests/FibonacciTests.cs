@@ -12,8 +12,7 @@ namespace Math.UnitTests
 		public void Test_Fibonacci_At_Index_Zero()
 		{
 			const long expectedValue = 0;
-			var fib = new Fibonacci();
-			long number = fib.GetFibonacciNumberAtIndex(0);
+			long number = Fibonacci.GetFibonacciNumberAtIndex(0);
 			Assert.IsTrue(number == expectedValue);
 		}
 
@@ -21,8 +20,7 @@ namespace Math.UnitTests
         public void Test_Fibonacci_At_Index_One()
         {
             const long expectedValue = 1;
-            var fib = new Fibonacci();
-            long number = fib.GetFibonacciNumberAtIndex(1);
+            long number = Fibonacci.GetFibonacciNumberAtIndex(1);
             Assert.IsTrue(number == expectedValue);
         }
 
@@ -30,29 +28,26 @@ namespace Math.UnitTests
 		public void Test_Fibonacci_At_Index_Five()
 		{
 			const long expectedValue = 5;
-			var fib = new Fibonacci();
-			long number = fib.GetFibonacciNumberAtIndex(5);
+			long number = Fibonacci.GetFibonacciNumberAtIndex(5);
 			Assert.IsTrue(number == expectedValue);
 		}
 
 		[Test]
 		public void Test_Fibonacci_At_Index_10()
 		{
-			var fib = new Fibonacci();
-			long expectedValue = fib.GetFibonacciNumberAtIndex(9) + fib.GetFibonacciNumberAtIndex(8);
+			long expectedValue = Fibonacci.GetFibonacciNumberAtIndex(9) + Fibonacci.GetFibonacciNumberAtIndex(8);
 			
-			long number = fib.GetFibonacciNumberAtIndex(10);
+			long number = Fibonacci.GetFibonacciNumberAtIndex(10);
 			Assert.IsTrue(number == expectedValue);
 		}
 		[Test]
 		public void Test_Fibonacci_Sequence_At_Index_Five()
 		{
-			var fib = new Fibonacci();
 			const int expectedLength = 6;
 			const long expectedFinalValue = 5;
-			var fibSequence = fib.GetFibonacciSequence(5);
+			var fibSequence = Fibonacci.GetFibonacciSequence(5).ToList();
 			Assert.IsTrue(fibSequence.Count() == expectedLength);
-			Assert.IsTrue(fibSequence.ToList()[5] == expectedFinalValue);
+			Assert.IsTrue(fibSequence[5] == expectedFinalValue);
 		}
 	}
 }

@@ -1,9 +1,7 @@
-﻿using System;
-using mhope.Math;
+﻿using System.Linq;
 using NUnit.Framework;
-using System.Linq;
 
-namespace Math.UnitTests
+namespace mhope.Math.UnitTests
 {
 	[TestFixture]
 	public class FibonacciTests

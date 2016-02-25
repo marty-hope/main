@@ -7,9 +7,9 @@ module Fibonacci =
             if n = 0 then 0
             elif n = 1 then 1
             else fib (n - 1) + fib (n - 2)
-        let arr = 
-            [|
-                for i in 0 .. index - 1 -> fib i
-           
-            |]
-        arr
+        [|
+            for i in 0 .. index - 1 -> fib i           
+        |]
+
+
+

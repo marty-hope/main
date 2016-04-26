@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
 using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using Should;
-using SpecsFor;
 
 namespace mhope.Domain.Specs
 {
@@ -47,6 +42,29 @@ namespace mhope.Domain.Specs
             {
                 var sut = TestValueObject.Create(GetTestString(101));
                 Assert.That(sut.IsFailure, Is.EqualTo(true));
+            }
+
+            [Test]
+            public void explicit_cast_a_string_to_test_value_object_should_succeed()
+            {
+                var testString = GetTestString(50);
+                var sut = (TestValueObject) testString;
+                sut.ShouldBeType<TestValueObject>();
+            }
+
+            [Test]
+            public void implicit_cast_a_string_to_test_value_object_should_succeed()
+            {
+                TestValueObject sut = GetTestString(100);
+                sut.ShouldBeType<TestValueObject>();
+            }
+
+            [Test]
+            public void implicit_cast_a_test_value_object_to_string_should_succeed()
+            {
+                TestValueObject testObject = GetTestString(100);
+                String sut = testObject;
+                sut.ShouldBeType<string>();
             }
 
             private string GetTestString(int lengthOfString)

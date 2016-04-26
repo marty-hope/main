@@ -27,6 +27,7 @@ namespace mhope.Domain.Specs
             return Result.Ok(new TestValueObject(value));
 
         }
+
         protected override bool EqualsCore(TestValueObject other)
         {
             return _value == other._value;
@@ -36,14 +37,15 @@ namespace mhope.Domain.Specs
         {
             return _value.GetHashCode();
         }
-        public static explicit operator TestValueObject(string customerName)
+        public static implicit operator TestValueObject(string value)
         {
-            return Create(customerName).Value;
+            return Create(value).Value;
         }
 
         public static implicit operator string(TestValueObject customerName)
         {
             return customerName._value;
         }
+
     }
 }

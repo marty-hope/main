@@ -23,7 +23,7 @@ namespace System.Test
         {
             var expectedvalue = "test" + Environment.NewLine;
             var actualValue = _sut.AppendFormattedLine("{0:s}", "test");
-            Assert.AreEqual(expectedvalue, actualValue);
+            Assert.AreEqual(expectedvalue, actualValue.ToString());
         }
     }
 }
